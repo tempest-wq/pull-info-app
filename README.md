@@ -48,6 +48,10 @@ O Pull Info pretende oferecer uma experiência única para:
 
 O objetivo é **informar, não persuadir**. O Pull Info não será uma plataforma de campanha, não apoiará partidos ou coligações e não realizará pesquisas de opinião, enquetes ou recomendações eleitorais.
 
+Além da plataforma, o projeto poderá disponibilizar futuramente uma **API open source** para acesso aos dados públicos coletados e normalizados. Ela poderá ser utilizada por desenvolvedores, pesquisadores, jornalistas, organizações da sociedade civil e outros projetos interessados em construir soluções baseadas em informações eleitorais.
+
+Essa disponibilização dependerá da análise das permissões de cada fonte, dos termos de uso, da aplicação de limites de acesso e do cumprimento da legislação aplicável. Dados que não possam ser redistribuídos não serão expostos diretamente; nesses casos, a API poderá disponibilizar metadados, referências e links para as fontes originais.
+
 ## Princípios do projeto
 
 ### Neutralidade verificável
@@ -110,6 +114,7 @@ Definir esse limite permite validar a estrutura e a experiência do produto ante
 | --- | --- | --- |
 | Interface web | React + TypeScript | Componentização, tipagem e ecossistema maduro para interfaces interativas |
 | API | FastAPI + Python | Alto desempenho para APIs e integração com coleta, tratamento de dados e IA |
+| API pública futura | FastAPI + OpenAPI | Permitir que terceiros consumam dados documentados e controlados |
 | Persistência | PostgreSQL | Dados relacionais, filtros, consistência e possibilidade de auditoria |
 | Coleta | Python, HTTP client e parsers | Reutilização do ecossistema Python e separação por fonte |
 | Tarefas assíncronas | Celery ou RQ + Redis | Execução de coletas sem bloquear as requisições da API |
@@ -212,6 +217,7 @@ Essa classificação não substitui a leitura crítica: uma fonte oficial pode e
 - incorporar propostas e notícias de fontes selecionadas;
 - adicionar comparação por estado e região;
 - melhorar histórico de alterações e tratamento de conflitos;
+- avaliar a disponibilização de uma API open source para consumo dos dados públicos coletados, normalizados e devidamente referenciados;
 - ampliar gradualmente a cobertura após validar qualidade e operação.
 
 ### Fase 3 — Mobile e acessibilidade
